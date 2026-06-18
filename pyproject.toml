@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lunahook-py"
+version = "0.1.0"
+description = "Python wrapper for LunaHook — attach to Windows VN/game processes and stream hooked text"
+license = "GPL-3.0"
+authors = [
+    { name = "Killswitch", email = "killswitch.asterisk@proton.me"}
+]
+readme = "README.md"
+keywords = [
+    "lunahook",
+    "lunatranslator",
+    "visual-novel",
+    "japanese",
+    "text-hooking",
+    "translation"
+]
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lunahook_py*"]
+
+[tool.setuptools.package-data]
+lunahook_py = ["bin/*"]
+
+[project.urls]
+Repository = "https://github.com/arima57/lunahook-py"
